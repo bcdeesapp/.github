@@ -45,4 +45,4 @@ All repositories follow our shared [contribution guidelines](..//CONTRIBUTING.md
 
 ---
 
-<sub>BCDees Global · Built in Nigeria 🇳🇬</sub>
+<sub>BCDees Global · All rights reserved</sub>
