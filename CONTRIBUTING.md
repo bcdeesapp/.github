@@ -10,13 +10,13 @@ We use **trunk-based development** with short-lived feature branches.
 main          — production-ready code; protected, requires PR + review
 staging       — pre-production integration branch
 dev           — active development integration
-feature/*     — short-lived feature branches (branch from dev)
+feat/*     — short-lived feature branches (branch from dev)
 fix/*         — bug fix branches
 hotfix/*      — urgent production fixes (branch from main)
 ```
 
 Branch naming examples:
-- `feature/kyc-tier-2-submission`
+- `feat/kyc-tier-2-submission`
 - `fix/escrow-release-race-condition`
 - `hotfix/wallet-balance-display`
 
