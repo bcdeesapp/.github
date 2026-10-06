@@ -1,68 +1,52 @@
-## Summary
+## What this changes
 
-<!-- What does this PR do? One or two sentences. -->
+<!-- Two or three sentences a teammate can read without opening the diff. What was wrong or missing, and what is true now. -->
 
-Closes #<!-- issue number -->
+## Linear
 
----
+<!-- Name the ticket with "Part of", never "Closes" or "Fixes". A merge moves the ticket to On Staging, and Done is set by hand after the check on staging. -->
 
-## Type of Change
+Part of BCD-
 
-- [ ] `feat` — new feature
-- [ ] `fix` — bug fix
-- [ ] `refactor` — code change with no feature/fix
-- [ ] `perf` — performance improvement
-- [ ] `test` — tests only
-- [ ] `docs` — documentation only
-- [ ] `chore` — build, tooling, deps
-- [ ] `hotfix` — urgent production fix
+<!-- If this pull request is only one piece of a larger ticket, say which piece, and say what is still left. -->
 
----
+## How to check it
 
-## What Changed
+<!-- Steps a reviewer can follow on staging, or the test that proves it. For a bug, say how you reproduced it first. -->
 
-<!-- Bullet list of key changes. Be specific. -->
+1.
+2.
 
--
--
+## Tests
 
----
+- [ ] New or changed behaviour has a test
+- [ ] Existing checks pass locally and in CI
+- [ ] For a defect fix: the test fails without this change and passes with it
 
-## Testing Done
+## Touches money, limits or webhooks?
 
-- [ ] Unit tests added / updated
-- [ ] Manually tested locally
-- [ ] Tested on staging environment
+<!-- Anything under wallet, ledger, fees, escrow, limits or webhook folders. If yes, a second reviewer is required. -->
 
-<!-- Describe what you tested and how -->
+- [ ] No
+- [ ] Yes, and I have listed below what happens if this fails halfway, and what happens if the same request or webhook arrives twice
 
----
+## Database or config changes
 
-## Sensitive Areas Touched
+- [ ] None
+- [ ] Migration included, rehearsed on a copy of staging data, and the rollback is written below
+- [ ] New or changed environment variable, added to the environment matrix and to staging and production
 
-Check all that apply — these require **2 approvals**:
+## Rollout and rollback
 
-- [ ] Wallet / ledger logic
-- [ ] Escrow engine
-- [ ] Auth / session management
-- [ ] KYC / user status transitions
-- [ ] Admin role / permission changes
-- [ ] Bank integration (virtual accounts, transfers)
-- [ ] P2P order / trade flow
+<!-- How this goes out, whether it needs a flag, and how we undo it. "Revert the pull request" is a fine answer when it is true. -->
 
----
+## Screenshots or recordings
 
-## Screenshots / Recordings
+<!-- For anything a person can see: mobile, back office or website. Before and after. -->
 
-<!-- For UI changes, attach before/after screenshots or a short screen recording -->
+## Before you ask for review
 
----
-
-## Checklist
-
-- [ ] Branch targets `dev` (or `staging` for release PRs) — **not `main`**
-- [ ] Commit messages follow Conventional Commits format
-- [ ] No secrets, API keys, or PII in the diff
-- [ ] `.env.example` updated if new env vars were added
-- [ ] Relevant docs updated
-- [ ] PR title follows `type(scope): description` format
+- [ ] The branch name and the ticket match, and the ticket is In Progress
+- [ ] I read my own diff once and removed stray logs, commented code and unrelated edits
+- [ ] The pull request is small enough to review in one sitting, or I have said in the description how to read it in order
+- [ ] No secrets, keys or personal data in the code, the logs or the screenshots
